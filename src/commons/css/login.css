@@ -1,0 +1,7 @@
+.login-option {
+  display: none;
+}
+
+.login-container:hover .login-option {
+  display: block;
+}

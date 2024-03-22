@@ -1,0 +1,7 @@
+.menu-dropdown, .pointer-icon {
+  display: none;
+}
+
+.link-item:hover .menu-dropdown, .link-item:hover .pointer-icon {
+  display: block;
+}
