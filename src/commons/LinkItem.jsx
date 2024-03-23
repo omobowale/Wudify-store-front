@@ -14,7 +14,7 @@ function LinkItem({
 
   return (
     <div
-      className={`py-4 flex gap-1 items-center font-semibold hover:text-orange-300 ${colorClassName} link-item`}
+      className={`py-4 flex gap-1 items-center font-[500] text-[15px] hover:text-orange-300 ${colorClassName} link-item`}
     >
       <div className="cursor-pointer relative">
         <span>{label}</span>

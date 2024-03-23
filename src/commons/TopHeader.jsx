@@ -12,7 +12,7 @@ function TopHeader() {
     <div className="flex justify-between mx-10 items-center py-4">
       <div className="flex gap-10 items-center w-1/3">
         <img alt="Wudify-logo" src="/assets/wudify_logo_top_header.png" />
-        <span className="font-semibold">Be a Partner</span>
+        <span className="font-[500] text-[15px]">Be a Partner</span>
       </div>
       <div className="w-1/3">
         <SearchInput />

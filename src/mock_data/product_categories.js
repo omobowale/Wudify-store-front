@@ -15,10 +15,96 @@ export const product_categories = [
 ]
 
 
+export const products = [
+    {
+        id: 1,
+        name: "Tayen Side Table",
+        prod_sub_cat: 1,
+        imagePath: "/assets/featured_product_1.png",
+        isFeatured: true,
+        isBestSeller: false,
+        isNewArrival: true,
+        price: "2000",
+        color: "Red",
+    },
+    {
+        id: 2,
+        name: "Around Coffee Table",
+        prod_sub_cat: 2,
+        imagePath: "/assets/featured_product_2.png",
+        isFeatured: true,
+        isBestSeller: true,
+        isNewArrival: false,
+        price: "2000",
+        color: "Blue"
+    },
+    {
+        id: 3,
+        name: "CH24 Wishbone Chair",
+        prod_sub_cat: 1,
+        imagePath: "/assets/featured_product_3.png",
+        isFeatured: true,
+        isBestSeller: false,
+        isNewArrival: true,
+        price: "2000",
+        color: "Green"
+
+    },
+    {
+        id: 4,
+        name: "Nikari April Table Low",
+        prod_sub_cat: 3,
+        imagePath: "/assets/featured_product_4.png",
+        isFeatured: true,
+        isBestSeller: false,
+        isNewArrival: true,
+        price: "2000",
+        color: "Red"
+
+    },
+    {
+        id: 5,
+        name: "Delphine Cane Velvet Chair",
+        prod_sub_cat: 1,
+        imagePath: "/assets/best_seller_product_1.png",
+        isFeatured: false,
+        isBestSeller: true,
+        isNewArrival: false,
+        price: "2000",
+        color: "Red"
+    },
+    {
+        id: 6,
+        name: "Freistil 141 Sofa 2 Seater",
+        prod_sub_cat: 2,
+        imagePath: "/assets/best_seller_product_2.png",
+        isFeatured: false,
+        isBestSeller: true,
+        isNewArrival: true,
+        price: "2000",
+        color: "Red"
+
+    },
+    {
+        id: 7,
+        name: "Linea Sohva Sofa",
+        prod_sub_cat: 3,
+        imagePath: "/assets/best_seller_product_3.png",
+        isFeatured: false,
+        isBestSeller: true,
+        isNewArrival: false,
+        price: "2000",
+        color: "Red"
+    },
+
+]
+
+
 export const product_sub_categories = [
     {
         id: 1,
         name: "Living Room",
+        thumbnailImagePath: "/assets/living_room.png",
         prod_category: 1,
         products: [
             {
@@ -54,6 +140,7 @@ export const product_sub_categories = [
     {
         id: 2,
         name: "Bedroom Furniture",
+        thumbnailImagePath: "/assets/bedroom_furniture.png",
         prod_category: 1,
         products: [
             {
@@ -86,6 +173,7 @@ export const product_sub_categories = [
         id: 3,
         name: "Office",
         prod_category: 1,
+        thumbnailImagePath: "/assets/office.png",
         products: [
             {
                 id: 1,
@@ -112,31 +200,8 @@ export const product_sub_categories = [
     },
     {
         id: 4,
-        name: "Kids & Babies",
-        prod_category: 1,
-        products: [
-            {
-                id: 1,
-                name: "Bunk Beds"
-            },
-            {
-                id: 2,
-                name: "Chairs"
-            },
-            {
-                id: 3,
-                name: "Desks"
-            },
-            {
-                id: 4,
-                name: "Dressers & Chests"
-            },
-
-        ]
-    },
-    {
-        id: 5,
         name: "Kitchen & Dining",
+        thumbnailImagePath: "/assets/kitchen_and_dining.png",
         prod_category: 1,
         products: [
             {
@@ -159,8 +224,35 @@ export const product_sub_categories = [
         ]
     },
     {
+        id: 5,
+        name: "Kids & Babies",
+        thumbnailImagePath: "/assets/office.png",
+        prod_category: 1,
+        products: [
+            {
+                id: 1,
+                name: "Bunk Beds"
+            },
+            {
+                id: 2,
+                name: "Chairs"
+            },
+            {
+                id: 3,
+                name: "Desks"
+            },
+            {
+                id: 4,
+                name: "Dressers & Chests"
+            },
+
+        ]
+    }
+    ,
+    {
         id: 6,
         name: "Home Decor",
+        thumbnailImagePath: "/assets/office.png",
         prod_category: 2,
         products: [
             {
@@ -185,6 +277,7 @@ export const product_sub_categories = [
     {
         id: 7,
         name: "Beddings",
+        thumbnailImagePath: "/assets/office.png",
         prod_category: 2,
         products: [
             {
@@ -209,6 +302,7 @@ export const product_sub_categories = [
     {
         id: 8,
         name: "Ceiling Lights",
+        thumbnailImagePath: "/assets/office.png",
         prod_category: 3,
         products: [
             {
@@ -233,6 +327,7 @@ export const product_sub_categories = [
     {
         id: 8,
         name: "Lamps",
+        thumbnailImagePath: "/assets/office.png",
         prod_category: 3,
         products: [
             {

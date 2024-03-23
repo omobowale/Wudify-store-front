@@ -14,7 +14,7 @@ function HeroItem({ heroIndex, selectionIndex, hero }) {
         <img
           src={hero.imagePath}
           alt="Imag"
-          className="h-[100vh] w-full rounded-sm"
+          className="h-[667px] w-full rounded-sm"
           style={{ objectFit: "cover" }}
         />
       </div>
@@ -24,7 +24,7 @@ function HeroItem({ heroIndex, selectionIndex, hero }) {
         <span className="text-white py-1.5 px-2.5 bg-orange-400 rounded-full">
           {hero.discountButtonText}
         </span>
-        <p className="text-white text-lg font-semibold" style={{ fontSize: "7em", margin: "0.7em 0" }}>{hero.title}</p>
+        <p className="text-white text-lg font-[500]" style={{ fontSize: "7em", margin: "0.7em 0" }}>{hero.title}</p>
         <button className="bg-white text-black rounded-md py-3 px-6 font-semibold hover:bg-black hover:text-white">{hero.buttonText}</button>
       </div>
     </div>

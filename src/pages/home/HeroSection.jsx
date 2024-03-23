@@ -54,9 +54,9 @@ function HeroSection() {
   }, [index]);
 
   return (
-    <div className="relative mx-auto my-4 w-[95%]">
+    <div className="relative mx-auto mt-4 mb-4 w-[95%]">
       <div
-        className="h-[100vh] bg-red-100"
+        className="h-[667px] bg-red-100"
         onMouseEnter={() => pauseTimer()}
         onMouseLeave={() => resumeTimer()}
       >
@@ -77,7 +77,7 @@ function HeroSection() {
               className="text-lg"
               onClick={() => {
                 setIndex((prev) => --prev);
-                pauseTimer();
+                resetTimer();
               }}
             />
           </CarouselArrow>
@@ -86,7 +86,7 @@ function HeroSection() {
               className="text-lg"
               onClick={() => {
                 setIndex((prev) => ++prev);
-                pauseTimer();
+                resetTimer();
               }}
             />
           </CarouselArrow>

@@ -18,7 +18,7 @@ function BottomHeader() {
                   >
                     {subcat?.name}
                   </div>
-                  <div className="font-normal mt-2 flex flex-col gap-1.5" style={{ fontSize: "11px" }}>
+                  <div className="font-normal mt-2 flex flex-col gap-1.5">
                     {subcat?.products?.map((product) => {
                       return (
                         <div className="cursor-pointer hover:text-orange-300">
@@ -88,7 +88,7 @@ function BottomHeader() {
         <LinkItem label={"Inspiration"} showDropDown />
         <LinkItem label={"Sales"} />
       </div>
-      <div className="text-orange-300 hover:text-white cursor-pointer font-semibold">
+      <div className="text-orange-300 hover:text-white cursor-pointer font-[500] text-[15px]">
         Book a Consultation
       </div>
     </div>
