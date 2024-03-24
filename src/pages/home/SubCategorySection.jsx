@@ -3,6 +3,7 @@ import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 import CarouselArrow from "../../commons/CarouselArrow";
 import { product_sub_categories } from "../../mock_data/product_categories";
 import SubCategoryItem from "../../commons/SubCategoryItem";
+import SlidingArrows from "../../commons/SlidingArrows";
 
 function SubCategorySection() {
   return (
@@ -15,14 +16,7 @@ function SubCategorySection() {
           return <SubCategoryItem subCategory={sub_cat} />;
         })}
       </div>
-      <div className="flex justify-between absolute w-[97%] top-[15vh] left-5">
-        <CarouselArrow>
-          <MdKeyboardArrowLeft className="text-lg" onClick={() => {}} />
-        </CarouselArrow>
-        <CarouselArrow>
-          <MdKeyboardArrowRight className="text-lg" onClick={() => {}} />
-        </CarouselArrow>
-      </div>
+      <SlidingArrows  />
     </div>
   );
 }

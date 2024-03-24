@@ -10,14 +10,22 @@ import "./css/login.css";
 function TopHeader() {
   return (
     <div className="flex justify-between mx-10 items-center py-4">
+      {/* Left */}
       <div className="flex gap-10 items-center w-1/3">
         <img alt="Wudify-logo" src="/assets/wudify_logo_top_header.png" />
         <span className="font-[500] text-[15px]">Be a Partner</span>
       </div>
+
+      {/* Center */}
       <div className="w-1/3">
-        <SearchInput />
+        <SearchInput
+          placeholder={"Search everything at Wudify online store"}
+          onChange={(e) => {}}
+        />
       </div>
-      <div className="w-1/3 flex gap-4 justify-end font-semibold">
+
+      {/* Right */}
+      <div className="w-1/3 flex gap-4 justify-end text-[15px] font-[500]">
         <div className="flex gap-1 items-center">
           <FiHeart className="text-lg" />
           <span>0</span>

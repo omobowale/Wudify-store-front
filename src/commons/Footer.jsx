@@ -3,6 +3,7 @@ import { product_categories } from "../mock_data/product_categories";
 import CustomMiniButton from "./CustomMiniButton";
 import FooterLinkItem from "./FooterLinkItem";
 import FooterMenuItem from "./FooterMenuItem";
+import SocialLinks from "./SocialLinks";
 
 const customerServices = {
   title: "Customer Service",
@@ -62,14 +63,14 @@ const productCategories = {
     return {
       id: index + 1,
       label: category.name,
-      url: "",
+      url: category.slug,
     };
   }),
 };
 
 function Footer() {
   return (
-    <div className="text-white bg-black py-10">
+    <div className="text-white bg-black py-10 w-full relative bottom-0">
       <div className="w-[95%] mx-auto flex gap-10 justify-around">
         <div className="flex flex-col gap-4 items-start">
           {/* Logo */}
@@ -92,12 +93,7 @@ function Footer() {
           </div>
 
           {/* Icons */}
-          <div className="flex gap-4">
-            <img src="/assets/x_icon.png" alt="" />
-            <img src="/assets/facebook_icon.png" alt="" />
-            <img src="/assets/instagram_icon.png" alt="" />
-            <img src="/assets/linkedin_icon.png" alt="" />
-          </div>
+          <SocialLinks />
         </div>
 
         {/* CATEGORIES */}
