@@ -30,10 +30,12 @@ function TopHeader() {
           <FiHeart className="text-lg" />
           <span>0</span>
         </div>
-        <div className="flex gap-1 items-center">
-          <IoCartOutline className="text-lg" />
-          <span>Cart</span>
-        </div>
+        <a href="/my-cart">
+          <div className="flex gap-1 items-center mt-[4px]">
+            <IoCartOutline className="text-lg" />
+            <span>Cart</span>
+          </div>
+        </a>
         <div className="relative flex gap-1 items-center login-container">
           <img src="/assets/user_logo.png" alt="Wudify user logo" />
           <div className="flex gap-1 cursor-pointer hover:text-orange-300">

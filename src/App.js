@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from './pages/home/Home';
 import Category from './pages/product_category/Category';
 import Product from './pages/product/Product';
+import Cart from './pages/cart/Cart';
 
 function App() {
 
@@ -11,6 +12,10 @@ function App() {
     {
       path: "/",
       element: <Home />
+    },
+    {
+      path: "/my-cart",
+      element: <Cart />
     },
     {
       path: "/categories/:slug",

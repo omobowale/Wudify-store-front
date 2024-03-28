@@ -63,7 +63,7 @@ const productCategories = {
     return {
       id: index + 1,
       label: category.name,
-      url: category.slug,
+      url: "/categories/" + category.slug,
     };
   }),
 };
