@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import MiniProductItem from "../../commons/MiniProductItem";
 import { products } from "../../mock_data/product_categories";
 import Pagination from "../../commons/Pagination";
+import { HiArrowLongRight } from "react-icons/hi2";
 
 function RightContent() {
   const [pageNumber, setPageNumber] = useState(1);
@@ -15,8 +16,8 @@ function RightContent() {
           <div>
             <select className="outline-none text-orange-500 text-[13px] cursor-pointer">
               <option>Most Popular</option>
-              <option>Most Purchased</option>
-              <option>Most Returned</option>
+              <option>New to Old</option>
+              <option>Old to New</option>
             </select>
           </div>
         </div>
