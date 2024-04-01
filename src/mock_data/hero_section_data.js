@@ -28,3 +28,12 @@ export const hero_data = [
         discountButtonText: "UP TO 20% OFF"
     }
 ];
+
+
+// {
+//     "title": "Activate Your Space",
+//     "buttonText": "Shop Furniture",
+//     "extraText" : "UP TO 20% OFF",
+//     "url" : "/",
+//     "imageUrl": "/assets/hero_image_2.jpg"
+//   }

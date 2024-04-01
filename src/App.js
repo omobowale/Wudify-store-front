@@ -5,8 +5,20 @@ import Home from './pages/home/Home';
 import Category from './pages/product_category/Category';
 import Product from './pages/product/Product';
 import Cart from './pages/cart/Cart';
+import Order from './pages/order/Order';
+import Checkout from './pages/checkout/Checkout';
+import {
+  useQuery,
+  useMutation,
+  useQueryClient,
+  QueryClient,
+  QueryClientProvider,
+} from '@tanstack/react-query'
 
 function App() {
+
+  // Create a client
+  const queryClient = new QueryClient()
 
   const router = createBrowserRouter([
     {
@@ -16,6 +28,14 @@ function App() {
     {
       path: "/my-cart",
       element: <Cart />
+    },
+    {
+      path: "/order-confirmation/:reference",
+      element: <Order />
+    },
+    {
+      path: "/my-cart/checkout",
+      element: <Checkout />
     },
     {
       path: "/categories/:slug",
@@ -29,8 +49,12 @@ function App() {
   ])
 
   return (
+
     <div className="App">
-      <RouterProvider router={router}></RouterProvider>
+      {/* Provide the client to your App */}
+      <QueryClientProvider client={queryClient}>
+        <RouterProvider router={router}></RouterProvider>
+      </QueryClientProvider>
     </div>
   );
 }

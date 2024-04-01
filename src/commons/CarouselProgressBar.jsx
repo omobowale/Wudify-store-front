@@ -5,7 +5,7 @@ function CarouselProgressBar({ numberOfDots = 2, selected }) {
     let list = [];
     for (let i = 0; i < n; i++) {
       list.push(
-        <input key={i} name="carousel" type="radio" checked={selected === i} style={{ accentColor: "white" }} />
+        <input className="w-[24px] h-[24px]" key={i} name="carousel" type="radio" checked={selected === i} style={{ accentColor: "black" }} />
       );
     }
 

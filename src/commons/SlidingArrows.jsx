@@ -5,23 +5,38 @@ import CarouselArrow from "./CarouselArrow";
 function SlidingArrows({
   widthClass = "w-[97%]",
   topPositionClass = "top-[15vh]",
+  showLeftArrow = true,
+  showRightArrow = true,
+  leftPositionClass = "left-5",
   onLeftArrowClick,
   onRightArrowClick,
 }) {
   return (
     <div>
       <div
-        className={`flex justify-between absolute ${widthClass} ${topPositionClass} left-5`}
+        className={`flex justify-between absolute ${widthClass} ${topPositionClass} ${leftPositionClass}`}
       >
-        <CarouselArrow>
-          <MdKeyboardArrowLeft className="text-lg" onClick={onLeftArrowClick} />
-        </CarouselArrow>
-        <CarouselArrow>
-          <MdKeyboardArrowRight
-            className="text-lg"
-            onClick={onRightArrowClick}
-          />
-        </CarouselArrow>
+        {showLeftArrow ? (
+          <CarouselArrow>
+            <MdKeyboardArrowLeft
+              className="text-lg"
+              onClick={onLeftArrowClick}
+            />
+          </CarouselArrow>
+        ) : (
+          <div></div>
+        )}
+
+        {showRightArrow ? (
+          <CarouselArrow>
+            <MdKeyboardArrowRight
+              className="text-lg"
+              onClick={onRightArrowClick}
+            />
+          </CarouselArrow>
+        ) : (
+          <div></div>
+        )}
       </div>
     </div>
   );

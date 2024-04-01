@@ -1,6 +1,6 @@
 import React from "react";
 import ViewAllButton from "../../commons/ViewAllButton";
-import CartPriceItem from "./CartPriceItem";
+import CartPriceItem from "../../commons/CartPriceItem";
 
 function CartSummary() {
   return (
@@ -21,10 +21,12 @@ function CartSummary() {
       <CartPriceItem title="Total" price="N3200" />
 
       <div className="mt-8">
-        <ViewAllButton
-          className="hover:text-white w-full text-center py-3 items-center hover:bg-orange-400 text-orange-400 bg-white"
-          text="Checkout"
-        />
+        <a href="/my-cart/checkout">
+          <ViewAllButton
+            className="hover:text-white w-full text-center py-3 items-center hover:bg-orange-400 text-orange-400 bg-white"
+            text="Checkout"
+          />
+        </a>
       </div>
     </div>
   );

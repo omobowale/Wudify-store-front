@@ -4,6 +4,7 @@ import { AiOutlinePlus } from "react-icons/ai";
 import { FiHeart } from "react-icons/fi";
 import ColorCircle from "../../commons/ColorCircle";
 import FullRoundedButton from "../../commons/FullRoundedButton";
+import QuantityAdjuster from "../../commons/QuantityAdjuster";
 import SocialLinks from "../../commons/SocialLinks";
 import { product_colors } from "../../mock_data/product_colors";
 import ProductThumbnailImage from "./ProductThumbnailImage";
@@ -15,34 +16,6 @@ function ProductDetailsSection({ product }) {
 
   const getSelectedColor = (color) => {
     setSelectedColor(color);
-  };
-
-  const increment = () => {
-    setQuantityValue((prev) => ++prev);
-  };
-  const decrement = () => {
-    if (quantityValue > 0) {
-      setQuantityValue((prev) => --prev);
-    }
-  };
-
-  const setToDefault = () => {
-    if (quantityValue.toString().length === 0) {
-      setQuantityValue(0);
-    }
-  };
-
-  const handleQuantityValueChange = (e) => {
-    let val = e.target.value;
-    console.log(val);
-    let numberOnly = "";
-    for (let x of val) {
-      if (/\^*[0-9]/.test(x)) {
-        numberOnly += x;
-      }
-    }
-
-    setQuantityValue(numberOnly);
   };
 
   useEffect(() => {
@@ -90,7 +63,7 @@ function ProductDetailsSection({ product }) {
 
           {/* Description */}
           <p className="text-[16px] font-[500] mb-4 text-[#667185]">
-           {product?.shortDescription}
+            {product?.shortDescription}
           </p>
 
           {/* SkU and Brand */}
@@ -125,28 +98,10 @@ function ProductDetailsSection({ product }) {
           {/* Quantity */}
           <div className="text-[14px] font-[600] mb-6">
             <p className="mb-3">Quantity</p>
-            <div className="text-[20px] bg-[#EAECF0] font-[600] flex gap-3 border rounded-full w-[152px] p-[12px] items-center justify-between">
-              <div
-                className="w-1/4 cursor-pointer hover:text-orange-300"
-                onClick={decrement}
-              >
-                <AiOutlineMinus className="" />
-              </div>
-              <div className="w-1/2">
-                <input
-                  onBlur={setToDefault}
-                  className="outline-none w-full text-center bg-[transparent]"
-                  value={quantityValue}
-                  onChange={(e) => handleQuantityValueChange(e)}
-                />
-              </div>
-              <div
-                className="w-1/4 cursor-pointer hover:text-orange-300"
-                onClick={increment}
-              >
-                <AiOutlinePlus />
-              </div>
-            </div>
+            <QuantityAdjuster
+              quantityValue={quantityValue}
+              setQuantityValue={setQuantityValue}
+            />
           </div>
 
           {/* Installation Request */}
